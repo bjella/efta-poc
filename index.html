@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFTA Trade Evolution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trade Evolution</h1>
+            <div class="controls">
+                <div class="select-group">
+                    <label for="reporterSelect">Reporter:</label>
+                    <select id="reporterSelect">
+                        <option value="NO">Norway</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="IS">Iceland</option>
+                        <option value="LI">Liechtenstein</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="partnerSelect">Partner:</label>
+                    <select id="partnerSelect">
+                        <option value="EU">European Union</option>
+                        <option value="WORLD">World</option>
+                        <option value="US">United States</option>
+                        <option value="CN">China</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="yearSelect">Year:</label>
+                    <select id="yearSelect">
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="charts-grid">
+                <div class="chart-section">
+                    <h2>Trade Evolution</h2>
+                    <div class="chart-container">
+                        <canvas id="tradeChart"></canvas>
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <span class="color-box exports"></span>
+                            <span>Exports</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-box imports"></span>
+                            <span>Imports</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h2>Top Traded Goods</h2>
+                    <div class="chart-container">
+                        <div id="goodsChart"></div>
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <span class="color-box exports"></span>
+                            <span>Exports</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-box imports"></span>
+                            <span>Imports</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
